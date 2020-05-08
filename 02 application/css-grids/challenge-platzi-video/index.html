@@ -153,6 +153,25 @@
     .hero .video .detail-video .suggestions span:nth-of-type(1){
       font-size: 12px;
     }
+    @media screen and (max-width:940px){
+      .hero .hero-container{
+        display: grid;
+        grid-template-columns: 350px;      
+      }  
+      .hero .video {
+        grid-template-columns: 900px;
+        grid-template-rows: 0.375fr 0.625fr;          
+      }
+      .hero .video .detail-video {
+          grid-template-columns: 1fr;
+          grid-template-rows: 50px 50px 1fr 1fr;
+          grid-template-areas:
+              "detail-title"
+              "detail-actions-topics"
+              "comments"
+              "suggestions";
+          margin-left: 50px;
+      }      
     </style>
 </head>
 <body>
