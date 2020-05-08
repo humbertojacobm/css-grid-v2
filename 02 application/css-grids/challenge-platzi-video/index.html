@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>Platzi video</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+    body{
+      font-family: 'Roboto', sans-serif;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns: 1024px;
+      justify-content: center;
+    }
+    .hero .hero-container{
+      display: grid;
+      grid-template-columns: 250px 1fr;      
+    }
+    /*left-side-section*/
+    .hero .left-side-section{
+        background-color: #151b31;
+    }
+    .left-side-section{
+      color:whitesmoke;
+    }
+    .left-side-section figure{
+      margin-inline-start: 0px;
+    }
+    .left-side-section .playlist{
+      margin-left: 15px;
+    }
+    .left-side-section .playlist .playlist-title{
+      font-size:medium;
+    }
+    .left-side-section .playlist .playlist-item{
+      font-size: small;
+    }
+    .left-side-section .friends {
+      margin-left: 15px;
+    }
+    .left-side-section .friends .title{
+      font-size:medium;
+    }
+    .left-side-section .friends .friends-list{
+      font-size: 15px;
+    }
+    .left-side-section .friends .friends-list .friend-item img{
+      border-radius: 50%;
+      width: 40px;;
+    }
+    /*video section*/
+    .hero .video{
+      background-color: teal;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.375fr 0.625fr;
+    }  
+    .hero .video .video-player{
+      background-color: thistle;
+      display:grid;
+      justify-items: center;
+    }
+    .hero .video .video-player video{
+      width: auto;
+      height: 250px;
+    }
+    .hero .video .detail-video{
+      background-color:whitesmoke;
+      padding-left: 10px;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      grid-template-rows:    50px 50px  3fr;      
+      grid-template-areas: "detail-title             detail-title"
+                           "detail-actions-topics    detail-actions-topics"
+                           "comments                 suggestions"
+                           ;
+    }
+    .hero .video .detail-video .detail-title{
+      font-size:medium;
+      grid-area: detail-title;
+    }
+    .hero .video .detail-video .detail-title .title{      
+      margin-bottom: 0px;
+    }
+    .hero .video .detail-video .detail-title .views-amount{
+      font-size: 13px;
+      color: #9a9696;
+      margin-top: 0px;
+    }
+    .hero .video .detail-video .detail-actions-topics {      
+      grid-area: detail-actions-topics ;
+      display:grid;
+      grid-template-columns: 4.5fr 5.5fr;      
+    }
+    .hero .video .detail-video .detail-actions-topics .actions{
+       display:grid;
+       grid-template-columns: 2fr 1fr 1fr;
+       justify-items: center;
+       align-items: center;
+    }
+    .hero .video .detail-video .detail-actions-topics .actions .compartir,
+    .hero .video .detail-video .detail-actions-topics .actions .guardar
+    {
+       text-align: center;
+       font-size: smaller;
+       cursor: pointer;
+    }
+    .hero .video .detail-video .comments{
+      grid-area: comments;
+    }
+    .hero .video .detail-video .comments .input-group{
+      width: 90%;
+    } 
+    .hero .video .detail-video .comments .input-group .input-group-prepend .input-group-text .comment-logo{
+      border-radius: 50%;
+      width: 25px;      
+    }  
+    .hero .video .detail-video .comments >p {
+      font-size:12px;
+    }
+    .hero .video .detail-video .comments .comment-list .comment-list-item{
+      display:grid;
+      grid-template-columns: 1fr 9fr;
+    }   
+    .hero .video .detail-video .comments .comment-list .comment-list-item .right p{
+      padding-top: 0px;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+      font-size: 14px;
+    }  
+    .hero .video .detail-video .comments .comment-list .comment-list-item .left .comment-logo{
+      border-radius: 50%;
+      width: 40px;      
+    }
+    .hero .video .detail-video .suggestions{
+      grid-area: suggestions;
+    }
+    .hero .video .detail-video .suggestions .suggestion-item{
+      margin:10px;
+    }
+    .hero .video .detail-video .suggestions .suggestion-item img{
+      width: 200px;
+    }
+    .hero .video .detail-video .suggestions .suggestion-item .suggestion-item-detail-text{
+      font-size: 12px;
+      margin:10px;
+      width: 200px;
+    }
+    .hero .video .detail-video .suggestions span:nth-of-type(1){
+      font-size: 12px;
+    }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-container">
+            <div class="left-side-section">
+                <figure>
+                    <img src="assets/main-logo.png" 
+                         alt=""
+                         class="logo">
+                </figure>
+                <section class="playlist">
+                   <p class="playlist-title">
+                       Mi Playlist
+                   </p>
+                   <p class="playlist-item">
+                       1    TheScience of Supersitions
+                   </p>
+                   <p class="playlist-item">
+                       2    TheScience of Supersitions
+                   </p>
+                   <p class="playlist-item">
+                       3    TheScience of Supersitions
+                   </p>
+                   <p class="playlist-item">
+                       4    TheScience of Supersitions
+                   </p> 
+                   <p class="playlist-item">
+                       5    TheScience of Supersitions
+                  </p>
+                  <p class="playlist-item">
+                       6    TheScience of Supersitions
+                  </p>
+                  <p class="playlist-item">
+                       7    TheScience of Supersitions
+                  </p> 
+                  <p class="playlist-item">
+                       8    TheScience of Supersitions
+                  </p>                  
+                  <p class="playlist-item">
+                       9    TheScience of Supersitions
+                  </p> 
+                  <p class="playlist-item">
+                       10    TheScience of Supersitions
+                  </p>                                                     
+                </section>
+                <section class="friends">
+                   <p class="title">
+                     Playlists de Amigos
+                   </p>
+                   <div class="friends-list">
+                      <div class="friend-item">
+                        <img src="assets/default-profile.jpg" 
+                              alt="">
+                        <span>
+                          Gordon Carroll
+                        </span>
+                      </div>
+                      <div class="friend-item">
+                        <img src="assets/default-profile.jpg" 
+                              alt="">
+                        <span>
+                          Gordon Carroll
+                        </span>
+                      </div>
+                      <div class="friend-item">
+                        <img src="assets/default-profile.jpg" 
+                              alt="">
+                        <span>
+                          Gordon Carroll
+                        </span>
+                      </div>
+                      <div class="friend-item">
+                        <img src="assets/default-profile.jpg" 
+                              alt="">
+                        <span>
+                          Gordon Carroll
+                        </span>
+                      </div>                                                                  
+                   </div>
+                </section>
+            </div>
+            <div class="video">    
+              <div class="video-player">
+                   <video src="assets/05 to ivan to see the new level.mp4"
+                          autoplay="false"
+                          controls>                     
+                   </video>
+              </div>
+              <div class="detail-video">
+                    <div class="detail-title">
+                       <p class="title">
+                         New Order - Bizarre Love Triangle
+                       </p>
+                       <p class="views-amount">
+                         124,886 vistas
+                       </p>
+                    </div>
+                    <div class="detail-actions-topics">
+                      <section class="actions">
+                        <button type="button" 
+                                class="btn btn-danger">
+                          Agregar a mi lista
+                        </button>                                          
+                        <div class="compartir">
+                          <svg class="bi bi-arrow-90deg-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M6.104 2.396a.5.5 0 010 .708L3.457 5.75l2.647 2.646a.5.5 0 11-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+                            <path fill-rule="evenodd" d="M2.75 5.75a.5.5 0 01.5-.5h6.5a2.5 2.5 0 012.5 2.5v5.5a.5.5 0 01-1 0v-5.5a1.5 1.5 0 00-1.5-1.5h-6.5a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
+                          </svg>
+                          <div>
+                            Compartir
+                          </div>                        
+                        </div>
+                        <div class="guardar">
+                          <svg class="bi bi-cloud-upload" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.887 6.2l-.964-.165A2.5 2.5 0 103.5 11H6v1H3.5a3.5 3.5 0 11.59-6.95 5.002 5.002 0 119.804 1.98A2.501 2.501 0 0113.5 12H10v-1h3.5a1.5 1.5 0 00.237-2.981L12.7 7.854l.216-1.028a4 4 0 10-7.843-1.587l-.185.96z"/>
+                            <path fill-rule="evenodd" d="M5 8.854a.5.5 0 00.707 0L8 6.56l2.293 2.293A.5.5 0 1011 8.146L8.354 5.5a.5.5 0 00-.708 0L5 8.146a.5.5 0 000 .708z" clip-rule="evenodd"/>
+                            <path fill-rule="evenodd" d="M8 6a.5.5 0 01.5.5v8a.5.5 0 01-1 0v-8A.5.5 0 018 6z" clip-rule="evenodd"/>
+                          </svg>                        
+                          <div>
+                            Guardar
+                          </div>                        
+                        </div>
+                     </section>
+                      <section class="labels">                      
+                        <span class="badge badge-pill badge-primary">Electronic</span>   
+                        <span class="badge badge-pill badge-info">Rock</span>
+                        <span class="badge badge-pill badge-danger">80</span>
+                        <span class="badge badge-pill badge-warning">Rela</span>  
+                      </section>                 
+                    </div>
+                    <div class="comments">
+                      <p>
+                        Comentarios
+                      </p>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" 
+                                id="basic-addon1">
+                                <img src="assets/default-profile.jpg" 
+                                alt=""
+                                class="comment-logo">                                
+                          </span>
+                        </div>
+                        <input type="text" 
+                               class="form-control" 
+                               placeholder="Añadir un comentario" 
+                               aria-label="comment" 
+                               aria-describedby="basic-addon1">
+                      </div>
+                      <div class="comment-list">
+                        <div class="comment-list-item">
+                          <div class="left">
+                            <img src="assets/default-profile.jpg" 
+                                 alt=""
+                                 class="comment-logo">
+                          </div>                          
+                          <div class="right">
+                            <p>
+                              Gordon Carroll
+                            <p>
+                            <p>
+                              Barbecue Sauce For A Perfect Barbeque
+                            </p>
+                          </div>                                                     
+                        </div>
+                      </div>
+                      <div class="comment-list">
+                        <div class="comment-list-item">
+                          <div class="left">
+                            <img src="assets/default-profile.jpg" 
+                                 alt=""
+                                 class="comment-logo">
+                          </div>                          
+                          <div class="right">
+                            <p>
+                              Gordon Carroll
+                            <p>
+                            <p>
+                              Barbecue Sauce For A Perfect Barbeque
+                            </p>
+                          </div>                                                     
+                        </div>
+                      </div>
+                      <div class="comment-list">
+                        <div class="comment-list-item">
+                          <div class="left">
+                            <img src="assets/default-profile.jpg" 
+                                 alt=""
+                                 class="comment-logo">
+                          </div>                          
+                          <div class="right">
+                            <p>
+                              Gordon Carroll
+                            <p>
+                            <p>
+                              Barbecue Sauce For A Perfect Barbeque
+                            </p>
+                          </div>                                                     
+                        </div>
+                      </div>
+                      <div class="comment-list">
+                        <div class="comment-list-item">
+                          <div class="left">
+                            <img src="assets/default-profile.jpg" 
+                                 alt=""
+                                 class="comment-logo">
+                          </div>                          
+                          <div class="right">
+                            <p>
+                              Gordon Carroll
+                            <p>
+                            <p>
+                              Barbecue Sauce For A Perfect Barbeque
+                            </p>
+                          </div>                                                     
+                        </div>
+                      </div>
+                      <div class="comment-list">
+                        <div class="comment-list-item">
+                          <div class="left">
+                            <img src="assets/default-profile.jpg" 
+                                 alt=""
+                                 class="comment-logo">
+                          </div>                          
+                          <div class="right">
+                            <p>
+                              Gordon Carroll
+                            <p>
+                            <p>
+                              Barbecue Sauce For A Perfect Barbeque
+                            </p>
+                          </div>                                                     
+                        </div>
+                      </div>
+                    </div>
+                    <div class="suggestions">
+                      <span>Sugerencias</span>
+                      <div class="suggestion-item">
+                        <img src="assets/justice-league-movie-team-photo.jpg" 
+                             alt="">                             
+                        <div class="suggestion-item-detail-text">
+                          Quick And Easy Lunches For the Cooking Challenge
+                        </div>                                                  
+                      </div>
+                      <div class="suggestion-item">
+                        <img src="assets/justice-league-movie-team-photo.jpg" 
+                             alt="">                             
+                        <div class="suggestion-item-detail-text">
+                          Quick And Easy Lunches For the Cooking Challenge
+                        </div>                                                  
+                      </div>                      
+                    </div>
+              </div>
+            </div> 
+        </div>
+    </div>   
+</body>
+</html>
