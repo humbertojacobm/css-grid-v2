@@ -32,6 +32,8 @@
     }
     .left-side-section .playlist{
       margin-left: 15px;
+      overflow-y: auto;
+      height: 375px;      
     }
     .left-side-section .playlist .playlist-title{
       font-size:medium;
@@ -47,6 +49,8 @@
     }
     .left-side-section .friends .friends-list{
       font-size: 15px;
+      height: 160px;
+      overflow: auto;
     }
     .left-side-section .friends .friends-list .friend-item img{
       border-radius: 50%;
@@ -122,6 +126,10 @@
     .hero .video .detail-video .comments >p {
       font-size:12px;
     }
+    .hero .video .detail-video .comments .comment-list-container {
+      height: 200px;
+      overflow: auto;
+    }
     .hero .video .detail-video .comments .comment-list .comment-list-item{
       display:grid;
       grid-template-columns: 1fr 9fr;
@@ -139,9 +147,13 @@
     .hero .video .detail-video .suggestions{
       grid-area: suggestions;
     }
+    .hero .video .detail-video .suggestions .suggestions-container{
+      height: 300px;
+      overflow: auto;
+    }    
     .hero .video .detail-video .suggestions .suggestion-item{
       margin:10px;
-    }
+    }    
     .hero .video .detail-video .suggestions .suggestion-item img{
       width: 200px;
     }
@@ -228,7 +240,16 @@
                   </p> 
                   <p class="playlist-item">
                        10    TheScience of Supersitions
-                  </p>                                                     
+                  </p>  
+                  <p class="playlist-item">
+                       11    TheScience of Supersitions
+                  </p>                  
+                  <p class="playlist-item">
+                       12    TheScience of Supersitions
+                  </p> 
+                  <p class="playlist-item">
+                       13    TheScience of Supersitions
+                  </p>                                                                     
                 </section>
                 <section class="friends">
                    <p class="title">
@@ -262,7 +283,28 @@
                         <span>
                           Gordon Carroll
                         </span>
-                      </div>                                                                  
+                      </div> 
+                      <div class="friend-item">
+                        <img src="assets/default-profile.jpg" 
+                              alt="">
+                        <span>
+                          Gordon Carroll
+                        </span>
+                      </div>
+                      <div class="friend-item">
+                        <img src="assets/default-profile.jpg" 
+                              alt="">
+                        <span>
+                          Gordon Carroll
+                        </span>
+                      </div>
+                      <div class="friend-item">
+                        <img src="assets/default-profile.jpg" 
+                              alt="">
+                        <span>
+                          Gordon Carroll
+                        </span>
+                      </div>                                                                 
                    </div>
                 </section>
             </div>
@@ -334,108 +376,126 @@
                                aria-label="comment" 
                                aria-describedby="basic-addon1">
                       </div>
-                      <div class="comment-list">
-                        <div class="comment-list-item">
-                          <div class="left">
-                            <img src="assets/default-profile.jpg" 
-                                 alt=""
-                                 class="comment-logo">
-                          </div>                          
-                          <div class="right">
-                            <p>
-                              Gordon Carroll
-                            <p>
-                            <p>
-                              Barbecue Sauce For A Perfect Barbeque
-                            </p>
-                          </div>                                                     
+                      <div class="comment-list-container">                      
+                        <div class="comment-list">
+                          <div class="comment-list-item">
+                            <div class="left">
+                              <img src="assets/default-profile.jpg" 
+                                  alt=""
+                                  class="comment-logo">
+                            </div>                          
+                            <div class="right">
+                              <p>
+                                Gordon Carroll
+                              <p>
+                              <p>
+                                Barbecue Sauce For A Perfect Barbeque
+                              </p>
+                            </div>                                                     
+                          </div>
                         </div>
-                      </div>
-                      <div class="comment-list">
-                        <div class="comment-list-item">
-                          <div class="left">
-                            <img src="assets/default-profile.jpg" 
-                                 alt=""
-                                 class="comment-logo">
-                          </div>                          
-                          <div class="right">
-                            <p>
-                              Gordon Carroll
-                            <p>
-                            <p>
-                              Barbecue Sauce For A Perfect Barbeque
-                            </p>
-                          </div>                                                     
+                        <div class="comment-list">
+                          <div class="comment-list-item">
+                            <div class="left">
+                              <img src="assets/default-profile.jpg" 
+                                  alt=""
+                                  class="comment-logo">
+                            </div>                          
+                            <div class="right">
+                              <p>
+                                Gordon Carroll
+                              <p>
+                              <p>
+                                Barbecue Sauce For A Perfect Barbeque
+                              </p>
+                            </div>                                                     
+                          </div>
                         </div>
-                      </div>
-                      <div class="comment-list">
-                        <div class="comment-list-item">
-                          <div class="left">
-                            <img src="assets/default-profile.jpg" 
-                                 alt=""
-                                 class="comment-logo">
-                          </div>                          
-                          <div class="right">
-                            <p>
-                              Gordon Carroll
-                            <p>
-                            <p>
-                              Barbecue Sauce For A Perfect Barbeque
-                            </p>
-                          </div>                                                     
+                        <div class="comment-list">
+                          <div class="comment-list-item">
+                            <div class="left">
+                              <img src="assets/default-profile.jpg" 
+                                  alt=""
+                                  class="comment-logo">
+                            </div>                          
+                            <div class="right">
+                              <p>
+                                Gordon Carroll
+                              <p>
+                              <p>
+                                Barbecue Sauce For A Perfect Barbeque
+                              </p>
+                            </div>                                                     
+                          </div>
                         </div>
-                      </div>
-                      <div class="comment-list">
-                        <div class="comment-list-item">
-                          <div class="left">
-                            <img src="assets/default-profile.jpg" 
-                                 alt=""
-                                 class="comment-logo">
-                          </div>                          
-                          <div class="right">
-                            <p>
-                              Gordon Carroll
-                            <p>
-                            <p>
-                              Barbecue Sauce For A Perfect Barbeque
-                            </p>
-                          </div>                                                     
+                        <div class="comment-list">
+                          <div class="comment-list-item">
+                            <div class="left">
+                              <img src="assets/default-profile.jpg" 
+                                  alt=""
+                                  class="comment-logo">
+                            </div>                          
+                            <div class="right">
+                              <p>
+                                Gordon Carroll
+                              <p>
+                              <p>
+                                Barbecue Sauce For A Perfect Barbeque
+                              </p>
+                            </div>                                                     
+                          </div>
                         </div>
-                      </div>
-                      <div class="comment-list">
-                        <div class="comment-list-item">
-                          <div class="left">
-                            <img src="assets/default-profile.jpg" 
-                                 alt=""
-                                 class="comment-logo">
-                          </div>                          
-                          <div class="right">
-                            <p>
-                              Gordon Carroll
-                            <p>
-                            <p>
-                              Barbecue Sauce For A Perfect Barbeque
-                            </p>
-                          </div>                                                     
+                        <div class="comment-list">
+                          <div class="comment-list-item">
+                            <div class="left">
+                              <img src="assets/default-profile.jpg" 
+                                  alt=""
+                                  class="comment-logo">
+                            </div>                          
+                            <div class="right">
+                              <p>
+                                Gordon Carroll
+                              <p>
+                              <p>
+                                Barbecue Sauce For A Perfect Barbeque
+                              </p>
+                            </div>                                                     
+                          </div>
                         </div>
                       </div>
                     </div>
                     <div class="suggestions">
                       <span>Sugerencias</span>
-                      <div class="suggestion-item">
-                        <img src="assets/justice-league-movie-team-photo.jpg" 
-                             alt="">                             
-                        <div class="suggestion-item-detail-text">
-                          Quick And Easy Lunches For the Cooking Challenge
-                        </div>                                                  
-                      </div>
-                      <div class="suggestion-item">
-                        <img src="assets/justice-league-movie-team-photo.jpg" 
-                             alt="">                             
-                        <div class="suggestion-item-detail-text">
-                          Quick And Easy Lunches For the Cooking Challenge
-                        </div>                                                  
-                      </div>                      
+                      <div class="suggestions-container">
+                        <div class="suggestion-item">
+                          <img src="assets/justice-league-movie-team-photo.jpg" 
+                               alt="">                             
+                          <div class="suggestion-item-detail-text">
+                            Quick And Easy Lunches For the Cooking Challenge
+                          </div>                                                  
+                        </div>
+                        <div class="suggestion-item">
+                          <img src="assets/justice-league-movie-team-photo.jpg" 
+                               alt="">                             
+                          <div class="suggestion-item-detail-text">
+                            Quick And Easy Lunches For the Cooking Challenge
+                          </div>                                                  
+                        </div> 
+                        <div class="suggestion-item">
+                          <img src="assets/justice-league-movie-team-photo.jpg" 
+                               alt="">                             
+                          <div class="suggestion-item-detail-text">
+                            Quick And Easy Lunches For the Cooking Challenge
+                          </div>                                                  
+                        </div>
+                        <div class="suggestion-item">
+                          <img src="assets/justice-league-movie-team-photo.jpg" 
+                               alt="">                             
+                          <div class="suggestion-item-detail-text">
+                            Quick And Easy Lunches For the Cooking Challenge
+                          </div>                                                  
+                        </div> 
+                      </div>                     
                     </div>
               </div>
             </div> 
