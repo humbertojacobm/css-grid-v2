@@ -152,8 +152,11 @@
     }
     .hero .video .detail-video .suggestions span:nth-of-type(1){
       font-size: 12px;
-    }
+    }    
     @media screen and (max-width:940px){
+      .hero {        
+        grid-template-columns: 100%;        
+      }      
       .hero .hero-container{
         display: grid;
         grid-template-columns: 350px;      
@@ -164,14 +167,23 @@
       }
       .hero .video .detail-video {
           grid-template-columns: 1fr;
-          grid-template-rows: 50px 50px 1fr 1fr;
+          grid-template-rows: 50px 100px 1fr 1fr;
           grid-template-areas:
               "detail-title"
               "detail-actions-topics"
               "comments"
-              "suggestions";
-          margin-left: 50px;
-      }      
+              "suggestions";          
+      }  
+    }    
+    @media screen and (max-width:660px) {
+      .hero .video {
+        grid-template-columns: 100%;               
+      }  
+      .hero .video .detail-video .detail-actions-topics {
+          grid-template-columns: 100%;
+          grid-template-rows: 50px 50px;
+      }          
+    }
     </style>
 </head>
 <body>
